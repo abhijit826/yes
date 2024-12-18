@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: x-larger;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+/* Hamburger menu */
+.hamburger-menu {
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+    top: 1%;
+    right: 50%;
+    background-color: #939393;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    font-size: larger;
+  }
+  
+  .hamburger-menu:hover {
+    background-color: #747474;
+  }
+  
+ 
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Dim background when menu is open */
+    position: relative;
+    z-index: 999;
+  }
+  
+  .white-box {
+    position: relative;
+    height: 600px;
+    width: 450px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 15px 8px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .box {
+    width: 100%;
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+  }
+  
+  .int-box {
+    height: 100px;
+    width: 150px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* White Box */
+.white-box {
+    position: absolute;
+    height: 500px;
+    width: 450px;
+    background-color: rgb(161, 158, 158);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+/* Inner box for rows */
+.box {
+    width: 100%; /* Make it flexible for smaller screens */
+    display: flex;
+    gap: 22px;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+}
+
+/* Content inside each box */
+.int-box {
+    height: 100px;
+    width: 120px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-icon {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-icon img {
+    max-height: 80px; /* Adjust size relative to viewport */
+    max-width: 80px;
+}
+
+/* Text section */
+.text {
+    height: auto; /* Allow flexible height */
+    width: 200px;
+    display: flex;
+    align-items: center;
+   
+    text-align: center;
+}
+.box:hover{
+    background-color: rgb(125, 117, 117);
+    border-radius: 20px;
+  
+    
+}
+
+/* Responsive styles */
+@media screen and (max-width: 514px) {
+    .white-box{
+        width: 350px;
+        height: 500px;
+    }
+   *{
+    font-size: 20px;
+   }
+}
