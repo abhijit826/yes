@@ -3,6 +3,7 @@ import "./Home.css";
 import MapSVG from "../assets/map.svg";
 import BrochureSVG from "../assets/brochure.svg";
 import ScheduleSVG from "../assets/schedule.svg";
+import PoCSVG from "../assets/poc.svg"
 
 
 const Home = () => {
@@ -16,13 +17,18 @@ const Home = () => {
     },
     {
       icon: BrochureSVG,
-      title: "Brochure",
+      title: "Rules and Regulations",
       pdf: "https://srmsigaram.com/downloads/SRMSIGARAM_2024_brochure.-rules%20and%20regulations.pdf",
     },
     {
       icon: ScheduleSVG,
       title: "Schedule",
       pdf: "https://srmsigaram.com/downloads/Events_Schedule.pdf",
+    },
+    {
+      icon: PoCSVG,
+      title: "PoC",
+      pdf: null,
     },
   ];
 
