@@ -1,177 +1,167 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    font-size: x-larger;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-    font-size: 20px;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  transition: all 0.5s ease;
 }
 
-/* Hamburger menu */
-/* .hamburger-menu {
-    font-size: 2rem;
-    cursor: pointer;
-    position: fixed;
-    top: 1%;
-    right: 50%;
-    background-color: #939393;
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    border-radius: 5px;
-    z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    font-size: larger;
+/* Animated Gradient Background */
+@keyframes pinkBlueGradient {
+  0% {
+    background: linear-gradient(
+      45deg,
+      #f8d7eb,
+      #e0f7fa
+    ); /* Light pink to light blue */
   }
-  
-  .hamburger-menu:hover {
-    background-color: #747474;
+  25% {
+    background: linear-gradient(
+      45deg,
+      #e0f7fa,
+      #f8d7eb
+    ); /* Swap colors slightly */
   }
-   */
- 
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Dim background when menu is open */
-    position: relative;
-    z-index: 999;
+  50% {
+    background: linear-gradient(
+      45deg,
+      #f8d7eb,
+      #e0f7fa
+    ); /* Light pink to light blue */
   }
-  
-  .white-box {
-    position: relative;
-    height: 600px;
-    width: 450px;
-    background-color: white;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    box-shadow: 15px 8px 30px rgba(0, 0, 0, 0.1);
+  75% {
+    background: linear-gradient(
+      45deg,
+      #e0f7fa,
+      #f8d7eb
+    ); /* Swap colors slightly */
   }
-  
-  .box {
-    width: 100%;
-    display: flex;
-    gap: 22px;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 15px;
-    transition: transform 0.3s ease;
+  100% {
+    background: linear-gradient(
+      45deg,
+      #f8d7eb,
+      #e0f7fa
+    ); /* Light pink to light blue */
   }
-  
-  .box:hover {
-    transform: scale(1.05);
-  }
-  
-  .int-box {
-    height: 100px;
-    width: 150px;
-    background-color: rgb(245, 245, 245);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .text h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
+}
+
+/* Container */
 .container {
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  animation: pinkBlueGradient 10s ease infinite; /* Apply animated gradient background */
+  position: relative;
+  z-index: 999;
 }
 
-
+/* White Box */
 .white-box {
-    position: absolute;
-    height: 600px;
-    width: 450px;
-    background-color: rgb(161, 158, 158);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
-    
+  position: absolute;
+  height: 600px;
+  width: 450px;
+  background-color: #b29cf5;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-
+/* Box */
 .box {
-    width: 100%; 
-    display: flex;
-    gap: 22px;
-    padding: 15px;
-    align-items: center;
-    justify-content: space-around;
-    box-sizing: border-box;
-    transition: all 200ms ease-in-out;
-    cursor: pointer;
+  width: 100%;
+  display: flex;
+  gap: 22px;
+  padding: 15px;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  background-color: #f7f7f7;
+  border-radius: 10px;
 }
 
+.box:hover {
+  background-color: #e0f7fa; /* Light blue background on hover */
+  transform: scale(1.05);
+  animation: pulseEffect 1s infinite; /* Pulse animation on hover */
+}
 
+/* Int Box */
 .int-box {
-    height: 100px;
-    width: 120px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100px;
+  width: 120px;
+  background-color: #f3f4f6;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Image Icon */
 .image-icon {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ec97cd;
+  color: #2563eb; /* Blue color for icons */
+  border-radius: 25px;
 }
 
 .image-icon img {
-    max-height: 80px; 
-    max-width: 80px;
+  max-height: 80px;
+  max-width: 80px;
+  color: #2563eb;
 }
 
-
+/* Text */
 .text {
-    height: auto; 
-    width: 200px;
-    display: flex;
-    align-items: center;
-   
-    text-align:left;
-}
-.box:hover{
-    background-color: rgb(125, 117, 117);
-    border-radius: 20px;
-  
-    
+  height: auto;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  color: #1e40af; /* Darker blue for text */
+  text-align: left;
 }
 
+/* Hover Effect on Box */
+.box:hover {
+  background-color: #f3f5f5;
+  border-radius: 15px;
+}
 
+/* Pulse Animation for Hover */
+@keyframes pulseEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Styles */
 @media screen and (max-width: 514px) {
-    .white-box{
-        width: 350px;
-        height: 550px;
-    }
-   *{
+  .white-box {
+    width: 350px;
+    height: 550px;
+  }
+  * {
     font-size: 16px;
-   }
+  }
 }
