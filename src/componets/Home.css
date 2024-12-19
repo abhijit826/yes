@@ -169,9 +169,9 @@
 @media screen and (max-width: 514px) {
     .white-box{
         width: 350px;
-        height: 500px;
+        height: 550px;
     }
    *{
-    font-size: 20px;
+    font-size: 16px;
    }
 }
