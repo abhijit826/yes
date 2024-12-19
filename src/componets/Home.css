@@ -10,7 +10,7 @@
 }
 
 /* Hamburger menu */
-.hamburger-menu {
+/* .hamburger-menu {
     font-size: 2rem;
     cursor: pointer;
     position: fixed;
@@ -29,7 +29,7 @@
   .hamburger-menu:hover {
     background-color: #747474;
   }
-  
+   */
  
   .container {
     display: flex;

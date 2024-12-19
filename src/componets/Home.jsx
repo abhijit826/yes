@@ -6,7 +6,7 @@ import ScheduleSVG from "../assets/schedule.svg";
 
 
 const Home = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  
 
   const items = [
     {
@@ -36,22 +36,15 @@ const Home = () => {
     }
   };
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-    
-     // Toggles the menu state
-  };
+  
 
   return (
     <div>
-      {/* Hamburger Menu */}
-      <div className="hamburger-menu"
-       onClick={toggleMenu}>
-        {menuOpen ? "X" : "☰"}
-      </div>
+      
+   
 
     
-      {menuOpen && ( 
+      
         <div className="container">
           <div className="white-box">
             {items.map((item, index) => (
@@ -72,7 +65,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-      )}
+     
     </div>
   );
 };
