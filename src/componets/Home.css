@@ -112,9 +112,9 @@
     
 }
 
-/* Inner box for rows */
+
 .box {
-    width: 100%; /* Make it flexible for smaller screens */
+    width: 100%; 
     display: flex;
     gap: 22px;
     padding: 15px;
@@ -125,7 +125,7 @@
     cursor: pointer;
 }
 
-/* Content inside each box */
+
 .int-box {
     height: 100px;
     width: 120px;
@@ -145,13 +145,13 @@
 }
 
 .image-icon img {
-    max-height: 80px; /* Adjust size relative to viewport */
+    max-height: 80px; 
     max-width: 80px;
 }
 
-/* Text section */
+
 .text {
-    height: auto; /* Allow flexible height */
+    height: auto; 
     width: 200px;
     display: flex;
     align-items: center;
