@@ -1,19 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Home.css";
 import MapSVG from "../assets/map.svg";
 import BrochureSVG from "../assets/brochure.svg";
 import ScheduleSVG from "../assets/schedule.svg";
-import PoCSVG from "../assets/poc.svg"
-
+import PoCSVG from "../assets/poc.svg";
 
 const Home = () => {
-  
-
   const items = [
     {
       icon: MapSVG,
       title: "Map",
-      pdf: null, 
+      pdf: null,
     },
     {
       icon: BrochureSVG,
@@ -32,46 +29,35 @@ const Home = () => {
     },
   ];
 
-  const handleDownload = (pdfPath) => {
+  const handleClick = (pdfPath) => {
     if (pdfPath) {
-      const link = document.createElement("a");
-      link.href = pdfPath;
-      link.download = pdfPath.split("/").pop();
-      link.click();
-      
+      window.open(pdfPath, "_blank", "noopener,noreferrer");
     }
   };
 
-  
-
   return (
     <div>
-      
-   
-
-    
-      
-        <div className="container">
-          <div className="white-box">
-            {items.map((item, index) => (
-              <div
-                className="box"
-                key={index}
-                onClick={() => handleDownload(item.pdf)}
-              >
-                <div className="int-box">
-                  <div className="image-icon">
-                    <img src={item.icon} alt={`${item.title} Icon`} />
-                  </div>
-                </div>
-                <div className="text">
-                  <h1>{item.title}</h1>
+      <div className="container">
+        <div className="white-box">
+          {items.map((item, index) => (
+            <div
+              className="box"
+              key={index}
+              onClick={() => handleClick(item.pdf)}
+              style={{ cursor: item.pdf ? "pointer" : "default" }}
+            >
+              <div className="int-box">
+                <div className="image-icon">
+                  <img src={item.icon} alt={`${item.title} Icon`} />
                 </div>
               </div>
-            ))}
-          </div>
+              <div className="text">
+                <h1>{item.title}</h1>
+              </div>
+            </div>
+          ))}
         </div>
-     
+      </div>
     </div>
   );
 };
